@@ -8,7 +8,6 @@ class App{
         
         this.camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 0.1, 100);
         this.camera.position.set(0,0,4);
-
         this.scene = new THREE.Scene();
         this.scene.background = new THREE.Color(0xaaaaaa);
 
@@ -19,6 +18,7 @@ class App{
         container.appendChild(this.renderer.domElement);
 
         this.renderer.setAnimationLoop(this.render.bind(this));
+
         window.addEventListener('resize', this.resize.bind(this) );
 	}	
     
